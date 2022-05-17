@@ -29,7 +29,7 @@ function Nav() {
         <header>
             <h2>
                 <a href="/">
-                    <span role="img" aria-label="heart"> </span> Phygital!
+                    <span role="img" aria-label="classical_building, computer">🏛️||💻 </span> Phygital!
                 </a>
             </h2>
             <nav>
