@@ -19,28 +19,31 @@ function Nav() {
         { name: "testing-storage", description: "Digital R&D apps; physical testing facilities" },
         {
             name: "travel-leisure",
-            description: "Digital planet and math random apps; physical adventure places",
-        },
+            description: "Digital planet and math random apps; physical adventure places"
+        }
     ];
-    function categorySelected(name) {
-        console.log(`${name} clicked`)
-    }
+    const handleClick = (item) => {
+        console.log(item);
+        return item;
+    };
+
     return (
-        <header>
+        <header className="flex-row px-1">
             <h2>
-                <a href="/">
-                    <span role="img" aria-label="heart"> </span> Phygital!
+                <a data-testid="link" href="/">
+                    <span role="img" aria-label="classical_building, computer">🏛️||💻 </span> Phygital!
                 </a>
             </h2>
             <nav>
                 <ul className="flex-row">
                     <li className="mx-2">
-                        <a href="#about">
+                        <a data-testid="about" href="#about" onClick={() => handleClick("About")}>
                             About me
                         </a>
                     </li>
-                    <li>
-                        <span>Contact</span>
+                    <li className={"mx-2"}>
+                        <span onClick={() => handleClick('Contact')}>Contact
+                        </span>
                     </li>
                     {categories.map((category) => (
                         <li
