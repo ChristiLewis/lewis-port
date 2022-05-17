@@ -166,7 +166,7 @@ section p {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    background-image: url("../Images/lens.jpeg");
+    background-image: url("./assets/cover/0.jpg");
     /* height removed NA flexbox */
     background-size: cover;
     /*Change b-p from center to 80% for final */

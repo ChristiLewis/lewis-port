@@ -2,10 +2,13 @@
 
 //PUT THIS INDEX.JS FILE IN SRC/ASSETS/COMPONENTS/NAV TO MAKE A NEW REACT COMPONENT FOR THE NAV SECTION WHICH IS THE HEADER. 1ST=IMPORT 2ND=FUNCTIONS 3RD=EXPORT ----> DON'T FORGET TO CAPITALIZE THE 'A' IN ABOUT BEC. IT USES PASCAL CASING TO SIGNIFY THE REACT COMPONENT
 import React from 'react';
+import React, { useState } from "react";
+//REACT REJECTED - NEED A HELPER
+import { capitalizeFirstLetter } from "../../utils/helpers";
 
 function Nav() {
     //ADD CATEGORIES - GO THE EXTRA MILE TO USE IT LATER
-    const categories = [
+    const [categories] = useState([
         {
             name: "business-finance",
             description:
@@ -22,16 +25,20 @@ function Nav() {
             description: "Digital planet and math random apps; physical adventure places"
         }
     ];
-    const handleClick = (item) => {
-        console.log(item);
-        return item;
-    };
+    const [currentCategory, setCurrentCategory] = useState(categories[0]);
+    // const handleClick = (item) => {
+    //     console.log(item);
+    //     return item;
+    // };
 
     return (
         <header className="flex-row px-1">
             <h2>
                 <a data-testid="link" href="/">
-                    <span role="img" aria-label="classical_building, computer">🏛️||💻 </span> Phygital!
+                    <span role="img" aria-label="classical_building, computer">{" "}
+                    🏛️||💻 
+                    </span>{" "} 
+                    Phygital!
                 </a>
             </h2>
             <nav>
@@ -45,16 +52,15 @@ function Nav() {
                         <span onClick={() => handleClick('Contact')}>Contact
                         </span>
                     </li>
-                    {categories.map((category) => (
-                        <li
-                            className="mx-1"
-                            key={category.name}
-                        >
-                            <span onClick={() => categorySelected(category.name)} >
-                                {category.name}
-                            </span>
-                        </li>
-                    ))}
+                    {
+                        categories.map((category) => (
+                            <li className="mx-1" key={category.name} >
+                                <span onClick={() => { handleClick(category.name); }}>
+                                    {capitalizeFirstLetter(category.name)}
+                                </span>
+                            </li>
+                        ))
+                    }
                 </ul>
             </nav>
         </header>
