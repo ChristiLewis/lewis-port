@@ -33,6 +33,4 @@ describe('About component', () => {
         //COMPARE - CONTRAST W/ GOAL TO MATCH
         expect(asFragment()).toMatchSnapshot();
     })
-
-
 })
