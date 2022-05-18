@@ -19,6 +19,7 @@ function Nav(props) {
         document.title = capitalizeFirstLetter(currentCategory.name);
     }, [currentCategory]);
 
+    {/*REACT RESPONDS TO THIS.HANDLECLICK - NOT HANDLECLICK ALONE */}
     const handleClick = (item) => {
         console.log(item);
         return item;
