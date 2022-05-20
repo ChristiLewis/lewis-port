@@ -1,5 +1,7 @@
+//WHEN USING USESTATE OR OTHER HOOKS TO SET DEFAULT VALUES FOR THE ARRAY- MODIFY THE IMPORT STATEMENT 
 import React, { useState } from 'react';
 
+//PHOTOLIST CHILD COMPONENT TO GALLERY= USING OBJECTS WITH TITLES AND DESCRIPTIONS TO USE IN THE MODAL LATER
 const PhotoList = ({ category }) => {
   const [photos] = useState([
     {
@@ -9,31 +11,31 @@ const PhotoList = ({ category }) => {
         'Keep budget tracker online and offline personal accountant'
     },
     {
-      name: 'Travel Buddy logo',
+      name: 'Travel buddy logo',
       category: 'developments-bldgs',
       description:
         'Team project application offering real-time data for two of the most unpredictable patterns in the world; the weather and currency exchange.'
     },
     {
-      name: 'Kitty Blah Blah',
+      name: 'Kitty blah blah',
       category: 'developments-bldgs',
       description:
         'Team project application featuring a virtual diary utilizing the latest meow meow encryption by Kitty Blah Blah'
     },
     {
-      name: 'Vert Bein Green',
+      name: 'Vert',
       category: 'health-wellness',
       description:
         'A social media site to build, continue, and react to conversation starters for post Covid social integration'
     },
     {
-      name: 'Run Buddy Logo',
+      name: 'Run buddy',
       category: 'health-wellness',
       description:
         'A personal training website'
     },
     {
-      name: 'README GENIE video pic',
+      name: 'Readme genie',
       category: 'individual-residential',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
@@ -51,51 +53,53 @@ const PhotoList = ({ category }) => {
         'Making all code accessible will require extensive work'
     },
     {
-      name: 'Pizza Hunt website',
+      name: 'Pizza hunt',
       category: 'retail-restaurant',
       description:
         'Making a pizza as a fun social commentary event'
     },
     {
-      name: 'Foodies icon on Android',
+      name: 'Food festival',
       category: 'retail-restaurant',
       description:
         'A food event database deployed as a PWA'
     },
     {
-      name: 'GitHub user repo R&D',
+      name: 'Git it done',
       category: 'testing-storage',
       description:
         'An app to do backend research with frontend convenience'
     },
     {
-      name: 'Portfolio Generator',
+      name: 'Portfolio generator',
       category: 'testing-storage',
       description:
         'A backend resource to quickly update and produce front end material'
     },
     {
-      name: 'Weather or Not',
+      name: 'Weather or not',
       category: 'travel-leisure',
       description:
         'Weather apps help us decide where to go and what to do'
     },
     {
-      name: 'Robot Gladiator',
+      name: 'Robot gladiator',
       category: 'travel-leisure',
       description:
         'Play a game of chance from your browser'
     },
     {
-      name: 'Robot Gladiator plus',
+      name: 'Jest another rpg',
       category: 'travel-leisure',
       description:
-        'Playa gane of chance from your CLI.'
+        'Play a game of chance from your CLI.'
     },
 
   ]);
 
-  const currentPhotos = photos.filter(photo => photo.category === category);
+  const currentPhotos = photos
+    .filter(photo => photo.category === category)
+  
 
   return (
     <div>
