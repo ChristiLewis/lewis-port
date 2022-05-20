@@ -1,9 +1,7 @@
 //THIS NAV RETURNS A SINGLE JSX ELEMENT----> THE HEADER
 
-//PUT THIS INDEX.JS FILE IN SRC/ASSETS/COMPONENTS/NAV TO MAKE A NEW REACT COMPONENT FOR THE NAV SECTION WHICH IS THE HEADER. 1ST=IMPORT 2ND=FUNCTIONS 3RD=EXPORT ----> DON'T FORGET TO USE PASCAL CASING TO SIGNIFY THE REACT COMPONENT
-
 // import React from 'react';
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 // import React, { useEffect } from 'react';
 //REACT REJECTED - NEED A HELPER
 import { capitalizeFirstLetter } from "../../utils/helpers";
@@ -18,12 +16,6 @@ function Nav(props) {
     useEffect(() => {
         document.title = capitalizeFirstLetter(currentCategory.name);
     }, [currentCategory]);
-
-    {/*REACT RESPONDS TO THIS.HANDLECLICK - NOT HANDLECLICK ALONE */}
-    const handleClick = (item) => {
-        console.log(item);
-        return item;
-    };
 
     return (
         <header className="flex-row px-1">

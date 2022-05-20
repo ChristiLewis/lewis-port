@@ -1,16 +1,9 @@
 //IMPORT ANY IMAGES- ADD THE SRC ATTRIBUTE OF {COVERIMAGE}
 // import coverImage from "../../assets/cover/0.jpg";
 //MAKING A NEW REACT COMPONENT FOR THE GALLERY SECTION 1ST IMPORT 2ND FUNCTIONS 3RD EXPORT
-import React, { useState } from 'react';
+import React from 'react';
 import PhotoList from '../PhotoList';
-import Nav from '../Nav';
 import { capitalizeFirstLetter } from '../../utils/helpers';
-
-//THIS BREAKS THE CODE WHEN COMMENTED OUT-BUT GIVES ERRORS WHEN ON
-const PhotoList = ({ category }) => {
-  const [photos] = useState([])}
-
-// const PhotoListCategory={currentCategoryName} && category.name && key
 
 function Gallery(props) {
   const { currentCategory } = props;
