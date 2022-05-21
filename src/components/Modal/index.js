@@ -6,7 +6,7 @@ const Modal = ({ onClose, currentPhoto }) => {
     return (
         <div className="modalBackdrop">
             <div className="modalContainer">
-                <h3 className="modalTitle">{name} </h3>
+                <h3 className="modalName">{name} </h3>
                 <img
                     src={require(`../../assets/digital/${category}/${index}.jpg`).default}
                     alt="current category"
