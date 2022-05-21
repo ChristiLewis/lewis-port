@@ -24,13 +24,13 @@ const PhotoList = ({ category }) => {
       name: 'Kitty blah blah',
       category: 'developments-bldgs',
       description:
-        'Team project application featuring a virtual diary utilizing the latest meow meow encryption by Kitty Blah Blah'
+        'Team project app featuring a virtual diary with the latest meow meow encryption by Kitty Blah Blah'
     },
     {
       name: 'Vert',
       category: 'health-wellness',
       description:
-        'A social media site to build, continue, and react to conversation starters for post Covid social integration'
+        'A social media site to continue and react to conversation starters for post Covid social integration'
     },
     {
       name: 'Run buddy',
@@ -42,7 +42,7 @@ const PhotoList = ({ category }) => {
       name: 'Readme genie',
       category: 'individual-residential',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
+        'Clone and run this node.js app to generate a quick yet thoughtful README file'
     },
     {
       name: 'Regenfrida gist',
@@ -117,7 +117,7 @@ const PhotoList = ({ category }) => {
       <div className="flex-row">
         {currentPhotos.map((image, i) => (
           <img
-            src={require(`../../assets/digital/${category}/${i}.jpg`).default}
+            src={require(`../../assets/digital/${category}/${i}.jpg`)}
             alt={image.name}
             className="img-thumbnail mx-1"
             onClick={() => toggleModal(image, i)}

@@ -14,9 +14,9 @@ exports[`Nav component matches snapshot 1`] = `
           aria-label="classical_building, computer"
           role="img"
         >
-          🏛️||💻 
+          🏛️||💻
         </span>
-         Phygital!
+        Phygital!
       </a>
     </h2>
     <nav>
@@ -41,59 +41,10 @@ exports[`Nav component matches snapshot 1`] = `
           </span>
         </li>
         <li
-          class="mx-1"
+          class="mx-1 false"
         >
           <span>
-            business-finance
-          </span>
-        </li>
-        <li
-          class="mx-1"
-        >
-          <span>
-            developments-bldgs
-          </span>
-        </li>
-        <li
-          class="mx-1"
-        >
-          <span>
-            health-wellness
-          </span>
-        </li>
-        <li
-          class="mx-1"
-        >
-          <span>
-            individual-residential
-          </span>
-        </li>
-        <li
-          class="mx-1"
-        >
-          <span>
-            refactor-renovate
-          </span>
-        </li>
-        <li
-          class="mx-1"
-        >
-          <span>
-            retail-restaurant
-          </span>
-        </li>
-        <li
-          class="mx-1"
-        >
-          <span>
-            testing-storage
-          </span>
-        </li>
-        <li
-          class="mx-1"
-        >
-          <span>
-            travel-leisure
+            Business-finance
           </span>
         </li>
       </ul>
