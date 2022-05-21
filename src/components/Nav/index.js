@@ -14,7 +14,7 @@ function Nav(props) {
     } = props;
 
     useEffect(() => {
-        document.title = capitalizeFirstLetter(currentCategory.name);
+        document.title = capitalizeFirstLetter(currentCategory.title);
     }, [currentCategory]);
 
     return (
@@ -38,15 +38,15 @@ function Nav(props) {
                         <span>Contact</span>
                     </li>
                     {categories.map((category) => (
-                        <li className={`mx-1 ${currentCategory.name === category.name
-                            }`} key={category.name}>
+                        <li className={`mx-1 ${currentCategory.title === category.title
+                            }`} key={category.title}>
                             <span
                                 onClick={() => {
                                     setCurrentCategory(category)
                                     // setContactSelected(false);
                                 }}
                             >
-                                {capitalizeFirstLetter(category.name)}
+                                {capitalizeFirstLetter(category.title)}
                             </span>
                         </li>
                     ))}

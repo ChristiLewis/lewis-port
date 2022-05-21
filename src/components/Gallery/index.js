@@ -9,10 +9,10 @@ function Gallery(props) {
   const { currentCategory } = props;
   return (
     <section>
-      <h1 data-testid="h1tag">{capitalizeFirstLetter(currentCategory.name)}</h1>
+      <h1 data-testid="h1tag">{capitalizeFirstLetter(currentCategory.title)}</h1>
       <p>{currentCategory.description}</p>
-      {/*PROP DRILL TO PASS DOWN THE CURRENTCATEGORY.NAME AS A PROP INTO THE PHOTOLIST COMPONENT FROM HERE- ITS PARENT GALLERY RETURN STATEMENT*/}
-      <PhotoList category={currentCategory.name} />
+      {/*PROP DRILL TO PASS DOWN THE currentCategorytitle AS A PROP INTO THE PHOTOLIST COMPONENT FROM HERE- ITS PARENT GALLERY RETURN STATEMENT*/}
+      <PhotoList category={currentCategory.title} />
     </section>
   );
 }
