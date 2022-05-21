@@ -16,6 +16,7 @@ const categories = [
     description: 
         "Digital asset tracker app; physical offices, a bank, and a medical project" 
     }
+    
 ]
 const mockCurrentCategory = jest.fn();
 const mockSetCurrentCategory = jest.fn();
