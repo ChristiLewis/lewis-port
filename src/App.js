@@ -3,7 +3,8 @@ import Nav from './components/Nav';
 import About from './components/About';
 import Gallery from './components/Gallery';
 // import './App.css';
-// import './index-clc.css';
+// import './index.css';
+import './index-clc.css';
 
 function App() {
   //ADD CATEGORIES - GO THE EXTRA MILE TO USE IT LATER
@@ -48,8 +49,8 @@ function App() {
       ></Nav>
       {/* REMOVE THE REACT TEMPLATE CONTENT INSIDE THE <DIV> CONTAINER ELEMENT AND ADD A <MAIN> ELEMENT TO CONTAIN YOUR NEW COMPONENTS */}
       <main>
-        <Gallery>currentCategory={currentCategory}</Gallery>
-        <About></About>
+          <Gallery currentCategory={currentCategory}/>
+        <About/>
       </main>
     </div>
   );

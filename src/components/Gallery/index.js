@@ -6,11 +6,11 @@ import PhotoList from '../PhotoList';
 import { capitalizeFirstLetter } from '../../utils/helpers';
 
 //THIS BREAKS THE CODE WHEN COMMENTED OUT-BUT GIVES ERRORS WHEN ON
-const PhotoList = ({ category }) => {
-  const [photos] = useState([])}
+// const PhotoList = ({ category }) => {
+//   const [photos] = useState([])};
 
 
-const PhotoListCategory={currentCategoryName} && category.name && key
+// const PhotoListCategory={currentCategoryName} && category.name && key
 
 function Gallery(props) {
   const { currentCategory } = props;
