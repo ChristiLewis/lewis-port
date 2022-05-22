@@ -12,11 +12,12 @@ import Nav from '..';
 
 //TEST TO HANDLE PROPS FOR THE NAV HERE UNDER THE IMPORT STATEMENTS
 const categories = [
-    { name: "business-finance",
-    description: 
-        "Digital asset tracker app; physical offices, a bank, and a medical project" 
+    {
+        name: "business-finance",
+        description:
+            "Digital asset tracker app; physical offices, a bank, and a medical project"
     }
-    
+
 ]
 const mockCurrentCategory = jest.fn();
 const mockSetCurrentCategory = jest.fn();
@@ -33,7 +34,7 @@ describe('Nav component', () => {
             categories={categories}
             setCurrentCategory={mockSetCurrentCategory}
             currentCategory={mockCurrentCategory}
-         />);
+        />);
     });
 
     //CREATE A TEST CASE TO COMPARE SNAPSHOTS OF THE DOM NODE STRUCTURE- HERE INSIDE THE DESCRIBE CALLBACK FUNCTION BODY- BENEATH THE RENDER TEST
@@ -43,7 +44,7 @@ describe('Nav component', () => {
             categories={categories}
             setCurrentCategory={mockSetCurrentCategory}
             currentCategory={mockCurrentCategory}
-         />);
+        />);
         //COMPARE - CONTRAST W/ GOAL TO MATCH
         expect(asFragment()).toMatchSnapshot();
     });
@@ -59,7 +60,7 @@ describe('emoji is visible', () => {
             categories={categories}
             setCurrentCategory={mockSetCurrentCategory}
             currentCategory={mockCurrentCategory}
-         />);
+        />);
         //AND ACCESSIBILITY ARIA LABEL VIA A CUSTOM MATCHER
         expect(getByLabelText('classical_building, computer')).toHaveTextContent('🏛️||💻');
     });
@@ -73,7 +74,7 @@ describe('links are visible', () => {
             categories={categories}
             setCurrentCategory={mockSetCurrentCategory}
             currentCategory={mockCurrentCategory}
-         />);
+        />);
         //ADD ASSERTION VIA ARIA LABEL VIA A CUSTOM MATCHER
         expect(getByTestId('link')).toHaveTextContent('Phygital!');
         expect(getByTestId('about')).toHaveTextContent('About me');
