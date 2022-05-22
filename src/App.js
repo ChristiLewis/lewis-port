@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Nav from './components/Nav';
 import About from './components/About';
 import Gallery from './components/Gallery';
+import ContactForm from './components/Contact';
 import './App.css';
 import './index.css';
 import './index-clc.css';
@@ -54,6 +55,7 @@ function App() {
   const [currentCategory, setCurrentCategory] = useState(categories[0]);
 
   return (
+    //INVOKE EACH COMPONENT'S FUNCTION BY CALLING IT IN THE APP.JS RETURN STATEMENT VIS A VIS <COMPONENTFUNCTIONNAME/> || <COMPONENTFUNCTIONNAME></COMPONENTFUNCTIONNAME>
     <div>
       {/*NAV IN PASCAL BECOMES ITS OWN ELEMENT ABOVE MAIN*/}
       <Nav
@@ -63,6 +65,7 @@ function App() {
       ></Nav>
       {/* REMOVE THE REACT TEMPLATE CONTENT INSIDE THE <DIV> CONTAINER ELEMENT AND ADD A <MAIN> ELEMENT TO CONTAIN YOUR NEW COMPONENTS */}
       <main>
+        <ContactForm/>
         <Gallery currentCategory={currentCategory} />
         <About />
       </main>
