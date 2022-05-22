@@ -10,91 +10,91 @@ const PhotoList = ({ category }) => {
   const [photos] = useState([
     {
       name: 'Asset graph',
-      category: 'business-finance',
+      category: 'business',
       description:
         'Keep budget tracker online and offline personal accountant'
     },
     {
       name: 'Travel buddy logo',
-      category: 'developments-bldgs',
+      category: 'developments',
       description:
         'Team project application offering real-time data for two of the most unpredictable patterns in the world; the weather and currency exchange.'
     },
     {
       name: 'Kitty blah blah',
-      category: 'developments-bldgs',
+      category: 'developments',
       description:
         'Team project app featuring a virtual diary with the latest meow meow encryption by Kitty Blah Blah'
     },
     {
       name: 'Vert',
-      category: 'health-wellness',
+      category: 'wellness',
       description:
         'A social media site to continue and react to conversation starters for post Covid social integration'
     },
     {
       name: 'Run buddy',
-      category: 'health-wellness',
+      category: 'wellness',
       description:
         'A personal training website'
     },
     {
       name: 'Readme genie',
-      category: 'individual-residential',
+      category: 'private',
       description:
         'Clone and run this node.js app to generate a quick yet thoughtful README file'
     },
     {
       name: 'Regenfrida gist',
-      category: 'individual-residential',
+      category: 'private',
       description:
         'A fun approach to learning about Regex functions'
     },
     {
       name: 'Refactoring code',
-      category: 'refactor-renovate',
+      category: 'refactor',
       description:
         'Making all code accessible will require extensive work'
     },
     {
       name: 'Pizza hunt',
-      category: 'retail-restaurant',
+      category: 'consumer',
       description:
         'Making a pizza as a fun social commentary event'
     },
     {
       name: 'Food festival',
-      category: 'retail-restaurant',
+      category: 'consumer',
       description:
         'A food event database deployed as a PWA'
     },
     {
       name: 'Git it done',
-      category: 'testing-storage',
+      category: 'testing',
       description:
         'An app to do backend research with frontend convenience'
     },
     {
       name: 'Portfolio generator',
-      category: 'testing-storage',
+      category: 'testing',
       description:
         'A backend resource to quickly update and produce front end material'
     },
     {
       name: 'Weather or not',
-      category: 'travel-leisure',
+      category: 'leisure',
       description:
         'Weather apps help us decide where to go and what to do'
     },
     {
       name: 'Robot gladiator',
-      category: 'travel-leisure',
+      category: 'leisure',
       description:
         'Play a game of chance from your browser'
     },
     {
       name: 'Jest another rpg',
-      category: 'travel-leisure',
+      category: 'leisure',
       description:
         'Play a game of chance from your CLI.'
     },
