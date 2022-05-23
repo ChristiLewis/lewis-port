@@ -103,12 +103,12 @@ const PhotoList = ({ category }) => {
 
   const currentPhotos = photos
     .filter(photo => photo.category === category)
-
+  //TOGGLEMODAL() EXECUTED = FALSE VALUE FOR ISMODALOPEN
   const toggleModal = (image, i) => {
     setCurrentPhoto({ ...image, index: i });
     setIsModalOpen(!isModalOpen);
   };
-
+  //PASS DOWN THE PROP ONCLOSE TO CHILD COMPONENT
   return (
     <div>
       {isModalOpen && (
@@ -117,7 +117,7 @@ const PhotoList = ({ category }) => {
       <div className="flex-row">
         {currentPhotos.map((image, i) => (
           <img
-            src={require(`../../assets/digital/${category}/${i}.jpg`)}
+            src={require(`../../assets/physical/${category}/${i}.jpg`)}
             alt={image.name}
             className="img-thumbnail mx-1"
             onClick={() => toggleModal(image, i)}
