@@ -33,7 +33,7 @@ describe('Gallery is rendering', () => {
     //TEST TO CHECK THE TITLE
     it('renders', () => {
         const { getByTestId } = render(<Gallery currentCategory={business} />)
-        expect(getByTestId('h1tag')).toHaveTextContent('Business-finance')
+        expect(getByTestId('h1tag')).toHaveTextContent('Business')
     })
 
 })

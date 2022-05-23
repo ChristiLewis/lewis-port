@@ -50,7 +50,7 @@ function ContactForm() {
 
     return (
         <section>
-            <h1 id="contact"> Contact Me!</h1>
+            <h1 data-testid="contact"> Contact me</h1>
             {/* ASSIGN FUNCTION TO SUBMIT DATA */}
             <form id="contact-form" onSubmit={handleSubmit}>
                 {/* ADD THE DEFAULT VALUE TO EACH FORM ELEMENT HANDLING FORM DATA TO ASSIGN INITIAL STATE VALUES FOR RECORD IN THE DOM */}
@@ -72,7 +72,8 @@ function ContactForm() {
                         < p className="error-text">{errorMessage}</p>
                     </div>
                 )}
-                <button type="submit">Submit</button>
+                <button data-testid="button"
+                    type="submit">Submit</button>
             </form>
 
         </section>

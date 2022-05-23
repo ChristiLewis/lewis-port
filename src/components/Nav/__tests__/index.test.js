@@ -13,7 +13,7 @@ import Nav from '..';
 //TEST TO HANDLE PROPS FOR THE NAV HERE UNDER THE IMPORT STATEMENTS
 const categories = [
     {
-        name: "business-finance",
+        name: "business",
         description:
             "Digital asset tracker app; physical offices, a bank, and a medical project"
     }
@@ -21,6 +21,8 @@ const categories = [
 ]
 const mockCurrentCategory = jest.fn();
 const mockSetCurrentCategory = jest.fn();
+const mockContactSelected = jest.fn();
+const mockSetContactSelected = jest.fn();
 
 //CONFIGURE THE TEST ENV BY CALLING CLEANUP() VIA AFTEREACH GLOBAL FUNCTION FROM JEST
 afterEach(cleanup);
@@ -34,6 +36,8 @@ describe('Nav component', () => {
             categories={categories}
             setCurrentCategory={mockSetCurrentCategory}
             currentCategory={mockCurrentCategory}
+            contactSelected={mockContactSelected}
+            setContactSelected={mockSetContactSelected}
         />);
     });
 
@@ -44,6 +48,8 @@ describe('Nav component', () => {
             categories={categories}
             setCurrentCategory={mockSetCurrentCategory}
             currentCategory={mockCurrentCategory}
+            contactSelected={mockContactSelected}
+            setContactSelected={mockSetContactSelected}
         />);
         //COMPARE - CONTRAST W/ GOAL TO MATCH
         expect(asFragment()).toMatchSnapshot();
@@ -60,6 +66,8 @@ describe('emoji is visible', () => {
             categories={categories}
             setCurrentCategory={mockSetCurrentCategory}
             currentCategory={mockCurrentCategory}
+            contactSelected={mockContactSelected}
+            setContactSelected={mockSetContactSelected}
         />);
         //AND ACCESSIBILITY ARIA LABEL VIA A CUSTOM MATCHER
         expect(getByLabelText('classical_building, computer')).toHaveTextContent('🏛️||💻');
@@ -74,6 +82,8 @@ describe('links are visible', () => {
             categories={categories}
             setCurrentCategory={mockSetCurrentCategory}
             currentCategory={mockCurrentCategory}
+            contactSelected={mockContactSelected}
+            setContactSelected={mockSetContactSelected}
         />);
         //ADD ASSERTION VIA ARIA LABEL VIA A CUSTOM MATCHER
         expect(getByTestId('link')).toHaveTextContent('Phygital!');

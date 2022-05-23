@@ -59,13 +59,13 @@ function App() {
   //1.REMOVE THE REACT TEMPLATE CONTENT INSIDE THE <DIV> CONTAINER ELEMENT AND ADD A <MAIN> ELEMENT TO CONTAIN YOUR NEW COMPONENTS 2.INVOKE EACH COMPONENT'S FUNCTION BY CALLING IT IN THE APP.JS RETURN STATEMENT VIS A VIS <COMPONENTFUNCTIONNAME/> || <COMPONENTFUNCTIONNAME></COMPONENTFUNCTIONNAME> 3.NAV IN PASCAL BECOMES ITS OWN ELEMENT ABOVE MAIN 4. THEN PASS IN GETTERS AND SETTERS
   return (
     <div>
-      <Nav>
+      <Nav
         categories={categories}
         setCurrentCategory={setCurrentCategory}
         currentCategory={currentCategory}
         contactSelected={contactSelected}
         setContactSelected={setContactSelected}
-      </Nav>
+      />
       <main>
         {!contactSelected ? (
           <>

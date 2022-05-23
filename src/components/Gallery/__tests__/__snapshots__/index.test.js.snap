@@ -14,13 +14,7 @@ exports[`Gallery is rendering matches snapshot DOM node stucture 1`] = `
     <div>
       <div
         class="flex-row"
-      >
-        <img
-          alt="Asset graph"
-          class="img-thumbnail mx-1"
-          src="0.jpg"
-        />
-      </div>
+      />
     </div>
   </section>
 </DocumentFragment>
