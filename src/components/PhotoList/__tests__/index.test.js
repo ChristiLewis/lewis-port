@@ -8,32 +8,24 @@ import { render, cleanup } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
 //IMPORT THE COMPONENT
-import Gallery from '..';
-
-const business = { name: "business-finance", description: "Digital asset tracker app; physical offices, a bank, and a medical project" };
+import PhotoList from '..';
 
 //CONFIGURE THE TEST ENV BY CALLING CLEANUP() VIA AFTEREACH GLOBAL FUNCTION FROM JEST
 afterEach(cleanup);
 
 //DECLARE THE COMPONENT BEING TESTED VIA DESCRIBE()
-describe('Gallery is rendering', () => {
+describe('PhotoList is rendering', () => {
     //RENDERS COMPONENT TEST
     it('renders', () => {
-        render(<Gallery currentCategory={business} />);
+        render(<PhotoList />);
     });
 
     //CREATE A TEST CASE TO COMPARE SNAPSHOTS OF THE DOM NODE STRUCTURE- HERE INSIDE THE DESCRIBE CALLBACK FUNCTION BODY- BENEATH THE RENDER TEST
     it('matches snapshot DOM node stucture', () => {
         //RETURN THE SNAPSHOT
-        const { asFragment } = render(<Gallery currentCategory={business} />);
+        const { asFragment } = render(<PhotoList />);
         //COMPARE - CONTRAST W/ GOAL TO MATCH
         expect(asFragment()).toMatchSnapshot();
-    })
-
-    //TEST TO CHECK THE TITLE
-    it('renders', () => {
-        const { getByTestId } = render(<Gallery currentCategory={business} />)
-        expect(getByTestId('h1tag')).toHaveTextContent('Business')
     })
 
 })

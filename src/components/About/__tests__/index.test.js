@@ -23,13 +23,13 @@ describe('About component', () => {
 describe('About component', () => {
     // First Test
     it('renders', () => {
-      render(<About />);
+        render(<About />);
     });
-  
+
     //CREATE A TEST CASE TO COMPARE SNAPSHOTS OF THE DOM NODE STRUCTURE- HERE INSIDE THE DESCRIBE CALLBACK FUNCTION BODY- BENEATH THE RENDER TEST
     it('matches snapshot DOM node stucture', () => {
         //RETURN THE SNAPSHOT
-        const { asFragment } = render( <About />);
+        const { asFragment } = render(<About />);
         //COMPARE - CONTRAST W/ GOAL TO MATCH
         expect(asFragment()).toMatchSnapshot();
     })
