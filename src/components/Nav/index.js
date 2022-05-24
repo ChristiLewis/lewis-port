@@ -12,7 +12,9 @@ function Nav(props) {
         setCurrentCategory,
         currentCategory,
         contactSelected,
-        setContactSelected
+        setContactSelected,
+        portfolioSelected,
+        setPortfolioSelected
     } = props;
 
     useEffect(() => {
@@ -26,16 +28,39 @@ function Nav(props) {
                     <span role="img" aria-label="classical_building, computer">
                         🏛️||💻
                     </span>
-                    Phygital!
+                    ChristiLewis goes phygital!
                 </a>
             </h2>
             <nav>
                 <ul className="flex-row">
                     <li className="mx-2">
-                        <a data-testid="about" href="#about" onClick={() => setContactSelected(false)}>
+                        <a data-testid="about" href="#about" onClick={() => setContactSelected(false) && setPortfolioSelected(false)}>
                             About me
                         </a>
+                        {/* <a data-testid="portfolio" href="#portfolio" onClick={() => setContactSelected(false) && setPortfolioSelected(true)}>
+                            Portfolio
+                        </a> */}
                     </li>
+                    <li className={`mx-2 ${portfolioSelected && 'navActive'}`}>
+                        <span onClick={() => setPortfolioSelected(true)}>Portfolio</span>
+                    </li>
+                    {categories.map((category) => (
+                        <li
+                            className={`mx-2 ${categories.name === category.name && !contactSelected && 'navActive'
+                                }`}
+                            key={categories.name === portfolioSelected}
+                        >
+                            <span
+                                onClick={() => {
+                                    setCurrentCategory(false)
+                                    setContactSelected(false)
+                                    setPortfolioSelected(categories);
+                                }}
+                            >
+                                {capitalizeFirstLetter(category.name)}
+                            </span>
+                        </li>
+                    ))}
                     <li className={`mx-2 ${contactSelected && 'navActive'}`}>
                         <span onClick={() => setContactSelected(true)}>Contact</span>
                     </li>
@@ -48,7 +73,8 @@ function Nav(props) {
                             <span
                                 onClick={() => {
                                     setCurrentCategory(category)
-                                    setContactSelected(false);
+                                    setContactSelected(false)
+                                    setPortfolioSelected(false);
                                 }}
                             >
                                 {capitalizeFirstLetter(category.name)}
