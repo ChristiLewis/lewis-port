@@ -54,6 +54,7 @@ function App() {
   ]);
 
   const [currentCategory, setCurrentCategory] = useState(categories[0]);
+  const [setcategories] = useState(categories[0]);
 
   //MAINTAIN THE STATE (NO CONTACTFORM VISIBLE AT FIRST) VIA USESTATE HOOK
   const [contactSelected, setContactSelected] = useState(false);
@@ -64,31 +65,33 @@ function App() {
     <div>
       <Nav
         categories={categories}
+        setcategories={setcategories}
         setCurrentCategory={setCurrentCategory}
         currentCategory={currentCategory}
         contactSelected={contactSelected}
         setContactSelected={setContactSelected}
-        portfolioSelected={portfolioSelected}
-        setportfolioSelected={setPortfolioSelected}
+
 
       />
       <main>
-        {!contactSelected ? (
+        {!contactSelected || !portfolioSelected ? (
           <>
             <Gallery currentCategory={currentCategory} />
+
             <About></About>
+
           </>
         ) : (
           <ContactForm></ContactForm>
         )}
-        {!portfolioSelected ? (
+        {/* {!portfolioSelected ? (
           <>
             <Gallery currentCategory={currentCategory} />
             <About></About>
           </>
         ) : (
           <Portfolio categories={categories} />
-        )}
+        )} */}
       </main>
     </div>
   );
