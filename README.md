@@ -68,3 +68,90 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+# [lewis-port](https://digital.ncdcr.gov/digital/collection/p15012coll1/id/59370/)
+### Here are early intern projects "Bein Green"!
+[![Watch](./src/assets/physical/private/3.jpg)]( https://youtu.be/tlxcVjjKCMw)
+
+## Overview
+Lewis-port, short for ChristiLewis' portfolio, is a REACT native SPA, or single Page Application.  Lightweight and easy to modify.  
+
+## Contents
+  * [Overview](#overview),
+  * [Table of Contents](#contents),
+  * [Description](#description),
+  * [Installation](#installation),
+  * [Notes](#notes),
+  * [Usage](#usage),
+  * [Credits](#credits),
+  * [License](#license),
+  * [Badges](#badges),
+  * [Features](#features),
+  * [Contribute](#contribute),
+  * [Tests](#tests)
+
+  ## Description
+  * The grand finale portfolio.  Less than I was expecting from myself, but more than I could have ever imagined just a year ago!
+  * All examples of work I have worked on personally in a detailed manner.  The approach I have taken to this course is one used for millenia in the study of art and architecture.  First, treat it as a craft and try to study, analyze, draw and re-draw examples of works you admire. 
+  * I used the opportunity of making a portfolio to categorize both works in architecture and development.  Right now it is messy, as all things are in the beginning.
+  * The best aspect of the code presented  is that it demonstrates the awkward tension between uniting the two worlds.
+  * Phygital is a term coined by Chris Weil in 2007, "The term phygital (synaeresis between the words “physical” and “digital”) was coined in 2007 by Chris Weil, currently Chairman-CEO at Momentum Worldwide, an international practice in the fields of consulting, strategy, analytics, and experience design," [Phygital Transformation article](https://onlinelibrary.wiley.com/pb-assets/assets/14679310/R&DM%20-%20CFP%20Phygital%20Transformation.pdf)
+
+  ## Installation
+* As REACT application, there is no special installation required for the general us of the lewis-port app. This is the last element of the MERN stack.  It is part 20 of 22 modules and 40 overall projects performed over a six month odyssey of the full-stack bootcamp sponsored by the University of Miami. 
+
+
+## Usage
+
+**Criteria from the Module 20 Challenge:**
+>GIVEN a single-page application portfolio for a web developer
+WHEN I load the portfolio
+THEN I am presented with a page containing a header, a section for content, and a footer
+WHEN I view the header
+THEN I am presented with the developer's name and navigation with titles corresponding to different sections of the portfolio
+WHEN I view the navigation titles
+THEN I am presented with the titles About Me, Portfolio, Contact, and Resume, and the title corresponding to the current section is highlighted
+WHEN I click on a navigation title
+THEN I am presented with the corresponding section below the navigation without the page reloading and that title is highlighted
+WHEN I load the portfolio the first time
+THEN the About Me title and section are selected by default
+WHEN I am presented with the About Me section
+THEN I see a recent photo or avatar of the developer and a short bio about them
+WHEN I am presented with the Portfolio section
+THEN I see titled images of six of the developer’s applications with links to both the deployed applications and the corresponding GitHub repository
+WHEN I am presented with the Contact section
+THEN I see a contact form with fields for a name, an email address, and a message
+WHEN I move my cursor out of one of the form fields without entering text
+THEN I receive a notification that this field is required
+WHEN I enter text into the email address field
+THEN I receive a notification if I have entered an invalid email address
+WHEN I am presented with the Resume section
+THEN I see a link to a downloadable resume and a list of the developer’s proficiencies
+WHEN I view the footer
+THEN I am presented with text or icon links to the developer’s GitHub and LinkedIn profiles, and their profile on a third platform (Stack Overflow, Twitter) 
+>
+
+  * ![Preview Image](./src/assets/digital/private/1.jpg)
+  * [![Watch the video](./src/assets/physical/private/1.jpg)]( https://youtu.be/)
+
+  * [GitHub Repo](https://github.com/ChristiLewis/lewis-port)
+
+    ## Credits
+  * [UM Coding Bootcamp](https://bootcamp.miami.edu/coding/)
+  * [ChristiLewis](https://github.com/ChristiLewis)
+
+## License
+* Contents are credited as inspired by the bootcamp, API documentation licensing requirements, and as per permission by the team members mentioned above. All content by the UM Bootcamp has a MIT License.
+
+## Badges
+* There are no badges generated at this time. For more information: [shields.io](https://shields.io/)
+
+## Features
+* Full M-E-R-N stack application
+
+## How-to-Contribute
+* Any recommendations?  Please see [contributorCovenant](https://www.contributor-covenant.org)
+
+## Tests
+* This is a Jest TTD based project still under development.
+  

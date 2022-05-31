@@ -70,10 +70,20 @@ function App() {
         currentCategory={currentCategory}
         contactSelected={contactSelected}
         setContactSelected={setContactSelected}
-
+        portfolioSelected={setPortfolioSelected}
+        
 
       />
       <main>
+      {!portfolioSelected ? (
+          <>
+            <Gallery currentCategory={currentCategory} />
+            <About></About>
+          </>
+        ) : (
+          <Portfolio categories={categories} />
+        )},
+
         {!contactSelected || !portfolioSelected ? (
           <>
             <Gallery currentCategory={currentCategory} />
@@ -84,14 +94,7 @@ function App() {
         ) : (
           <ContactForm></ContactForm>
         )}
-        {/* {!portfolioSelected ? (
-          <>
-            <Gallery currentCategory={currentCategory} />
-            <About></About>
-          </>
-        ) : (
-          <Portfolio categories={categories} />
-        )} */}
+
       </main>
     </div>
   );
