@@ -1,100 +1,81 @@
+//IMPORT ANY NEW COMPONENTS
 import React, { useState } from 'react';
 import Nav from './components/Nav';
 import About from './components/About';
 import Gallery from './components/Gallery';
 import ContactForm from './components/Contact';
-import Portfolio from './components/Portfolio';
 import './App.css';
 import './index.css';
 import './index-clc.css';
 
 function App() {
+  //MAINTAIN THE STATE (NO CONTACTFORM VISIBLE AT FIRST) VIA USESTATE HOOK
+  const [contactSelected, setContactSelected] = useState(false);
   //CATEGORIES BECOMES IDENTIFIED AS AN ARRAY AND MOVED FROM NAV TO APP
   const [categories] = useState([
     {
       name: "business",
       description:
-        "An asset tracker app:"
+        "Digital asset tracker app; physical offices, a bank, and a medical project"
     },
     {
       name: "developments",
       description:
-        "Team projects:"
+        "Digital team projects; physical stand-alone building projects"
     },
     {
       name: "wellness",
       description:
-        "Workout apps for physical and social health:"
+        "Digital workout apps for physical and social health; physical medical and healthclub facilities"
     },
     {
       name: "private",
       description:
-        "Personal improvement tools:"
+        "Digital expression tools; physical private residences"
     },
     {
       name: "refactor",
       description:
-        "Best-practice and accessibility improvements:"
+        "Digital accessibility; physical typical energy efficiency and accessibility improvements"
     },
     {
       name: "consumer",
       description:
-        "Foodie friendly retail apps:"
+        "Digital foodie and retail apps; physical stores and restaurants"
     },
     {
       name: "testing",
       description:
-        "R&D apps"
+        "Digital R&D apps; physical testing facilities"
     },
     {
       name: "leisure",
       description:
-        "The planet's own math random app- the weather and games:"
+        "Digital game and math random apps; physical adventure places"
     },
   ]);
 
   const [currentCategory, setCurrentCategory] = useState(categories[0]);
-  const [setcategories] = useState(categories[0]);
-
-  //MAINTAIN THE STATE (NO CONTACTFORM VISIBLE AT FIRST) VIA USESTATE HOOK
-  const [contactSelected, setContactSelected] = useState(false);
-  const [portfolioSelected, setPortfolioSelected] = useState(false);
 
   //1.REMOVE THE REACT TEMPLATE CONTENT INSIDE THE <DIV> CONTAINER ELEMENT AND ADD A <MAIN> ELEMENT TO CONTAIN YOUR NEW COMPONENTS 2.INVOKE EACH COMPONENT'S FUNCTION BY CALLING IT IN THE APP.JS RETURN STATEMENT VIS A VIS <COMPONENTFUNCTIONNAME/> || <COMPONENTFUNCTIONNAME></COMPONENTFUNCTIONNAME> 3.NAV IN PASCAL BECOMES ITS OWN ELEMENT ABOVE MAIN 4. THEN PASS IN GETTERS AND SETTERS
   return (
     <div>
       <Nav
         categories={categories}
-        setcategories={setcategories}
         setCurrentCategory={setCurrentCategory}
         currentCategory={currentCategory}
         contactSelected={contactSelected}
         setContactSelected={setContactSelected}
-        portfolioSelected={setPortfolioSelected}
-        
-
-      />
+      ></Nav>
       <main>
-      {!portfolioSelected ? (
+        {!contactSelected ? (
           <>
             <Gallery currentCategory={currentCategory} />
-            <About></About>
+            <About />
           </>
         ) : (
-          <Portfolio categories={categories} />
-        )},
-
-        {!contactSelected || !portfolioSelected ? (
-          <>
-            <Gallery currentCategory={currentCategory} />
-
-            <About></About>
-
-          </>
-        ) : (
-          <ContactForm></ContactForm>
+          <ContactForm />
         )}
-
       </main>
     </div>
   );
