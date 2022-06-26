@@ -13,7 +13,7 @@ function Portfolio(props) {
       <h1 data-testid="h1tag">{(categories.nameArr)}</h1>
       <p>{categories.descriptionArr}</p>
       {/*PROP DRILL TO PASS DOWN THE CATEGORIEs'NAMES AND DESCRIPTION AS PROPS INTO THE GALLERY COMPONENT FROM HERE- ITS PARENT PORTFOLIO RETURN STATEMENT*/}
-      <Gallery categories={categories['']} />
+      <Gallery categories={categories[' ']} />
     </section>
   );
 }

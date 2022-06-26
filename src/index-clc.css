@@ -452,7 +452,7 @@ main {
         flex-wrap: wrap;
         align-items: center;
         margin: 0 auto;
-        max-width: 90%;
+        max-width: 100%;
     }
 }
 
@@ -473,7 +473,7 @@ main {
         margin: 0 auto;
     }
     .PROJECT-1 img {
-        width: fit-content;
+        width: 100%;
     }
     main p {
         flex: 100%;
@@ -567,11 +567,11 @@ span:hover {
 
 main {
     /* Remove text-align for flexbox specs */
-    width: 100%;
+    width: auto;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: var(--secondary-color);
+    /* background-color: var(--secondary-color); */
     padding: 25px;
 }

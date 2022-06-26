@@ -16,7 +16,7 @@ function Gallery(props) {
       <h1 data-testid="h1tag">{capitalizeFirstLetter(currentCategoryName)}</h1>
       <p>{currentCategory.description}</p>
       {/*PROP DRILL TO PASS DOWN THE currentCategoryname AS A PROP INTO THE PHOTOLIST COMPONENT FROM HERE- ITS PARENT GALLERY RETURN STATEMENT*/}
-      <PhotoList category={currentCategoryName} />
+      <PhotoList category={currentCategory.name} />
     </section>
   );
 }

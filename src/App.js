@@ -4,8 +4,9 @@ import Nav from './components/Nav';
 import About from './components/About';
 import Gallery from './components/Gallery';
 import ContactForm from './components/Contact';
+// import Portfolio from './components/Portfolio';
 import './App.css';
-import './index.css';
+// import './index.css';
 import './index-clc.css';
 
 function App() {
@@ -70,7 +71,7 @@ function App() {
       <main>
         {!contactSelected ? (
           <>
-            <Gallery currentCategory={currentCategory} />
+            <Gallery currentCategory={currentCategory}></Gallery>
             <About />
           </>
         ) : (

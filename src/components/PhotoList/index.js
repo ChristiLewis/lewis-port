@@ -100,11 +100,10 @@ const PhotoList = ({ category }) => {
         'A personal training website.'
     },
 
-  ])
+  ]);
 
 
-  const currentPhotos = photos
-    .filter(photo => photo.category === category)
+  const currentPhotos = photos.filter(photo => photo.category === category);
   //TOGGLEMODAL() EXECUTED = FALSE VALUE FOR ISMODALOPEN
   const toggleModal = (image, i) => {
     setCurrentPhoto({ ...image, index: i });

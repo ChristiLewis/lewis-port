@@ -2,10 +2,11 @@
 
 // import React from 'react';
 import React, { useEffect } from "react";
-// import React, { useEffect } from 'react';
+// import React, { useState } from 'react';
 //REACT REJECTED - NEED A HELPER
 import { capitalizeFirstLetter } from "../../utils/helpers";
 
+//WE LIFT THE NAV PROPERTIES VIA PROPS INTO APP.JS TO BE ACCESSED LIKE A PARENT TO OTHER COMPONENT CHILDREN
 function Nav(props) {
     const {
         categories = [],
@@ -40,9 +41,8 @@ function Nav(props) {
                         <span onClick={() => setContactSelected(true)}>Contact</span>
                     </li>
                     {categories.map((category) => (
-                        <li
-                            className={`mx-1 ${currentCategory.name === category.name && !contactSelected && 'navActive'
-                                }`}
+                        <li className={`mx-1 ${currentCategory.name === category.name && 'navActive'
+                            }`}
                             key={category.name}
                         >
                             <span
